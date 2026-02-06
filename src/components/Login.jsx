@@ -22,7 +22,7 @@ const Login = () => {
 
       alert("Login successful!");
       // Redirect user to dashboard or home page
-      window.location.href = "/dashboard";
+      window.location.href = "/select-company"; // redirect to company selection
     } catch (error) {
       console.error(error);
       alert(error.response?.data?.message || "Login failed!");

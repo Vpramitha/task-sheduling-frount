@@ -1,0 +1,79 @@
+.select-company-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  padding: 40px 20px;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+/* Grid */
+.company-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+/* Card */
+.company-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.company-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.company-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+.company-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Create new company card */
+.create-card {
+  background: transparent;
+  border: 2px dashed #ffffff;
+  color: #ffffff;
+}
+
+.create-card .company-name {
+  color: #ffffff;
+}
+
+.plus-icon {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.8rem;
+  }
+
+  .company-card {
+    padding: 20px;
+  }
+}

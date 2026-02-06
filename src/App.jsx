@@ -3,6 +3,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import Dashboard from "./components/Dashboard"; 
 import ProtectedRoute from "./ProtectedRoute";
+import SelectCompany from "./components/SelectCompany";
 
 function App() {
   return (
@@ -18,7 +19,13 @@ function App() {
             </ProtectedRoute>
           }
         />
-        
+        <Route
+          path="/select-company"
+          element={
+            <ProtectedRoute>
+              <SelectCompany />
+            </ProtectedRoute>}
+        />
     </Routes>
   );
 }
