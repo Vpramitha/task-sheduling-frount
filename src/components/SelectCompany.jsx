@@ -1,4 +1,5 @@
-import React from "react";
+import RequestCompanyModal from "../components/RequestCompanyModal";
+import { useState } from "react";
 import "./SelectCompany.css";
 
 const companies = [
@@ -30,6 +31,9 @@ const SelectCompany = () => {
     // navigate("/company/create");
   };
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+
   return (
     <div className="select-company-container">
       <h1 className="page-title">Select Your Company</h1>
@@ -49,6 +53,26 @@ const SelectCompany = () => {
             <h2 className="company-name">{company.name}</h2>
           </div>
         ))}
+
+        
+
+        <RequestCompanyModal
+  isOpen={isModalOpen}
+  onClose={() => setIsModalOpen(false)}
+  onSubmit={(companyId) => {
+    console.log("Requested Company ID:", companyId);
+    setIsModalOpen(false);
+  }}
+/>
+
+
+        <div
+          className="company-card create-card"
+          onClick={() => setIsModalOpen(true)}
+        >
+          <div className="plus-icon">+</div>
+          <h2 className="company-name">Request for New Company</h2>
+        </div>
 
         {/* Create New Company */}
         <div
